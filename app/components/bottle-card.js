@@ -5,15 +5,20 @@ export default Component.extend({
   bottle: null,
   classNames: ['card block trailer-1'],
   store: Ember.inject.service(),
-
-  colorClass: Ember.computed('bottle.status', function(){
-    return this.get('bottle.status') ? 'path-blue' : 'path-red'
+  colorStyle: Ember.computed('bottle.color', function(){
+    return Ember.String.htmlSafe('color:' + this.get('bottle.color'));
   }),
 
   actions: {
-    changeState(){
+    stateChanged(){
       this.get('store').findRecord('output', this.get('bottle.id')).then(function(output){
-        output.set('status', !output.get('status'));
+        output.set('on', !output.get('on'));
+        output.save();
+      });
+    },
+    colorChanged(color){
+      this.get('store').findRecord('output', this.get('bottle.id')).then(function(output){
+        output.set('color', color);
         output.save();
       });
     }

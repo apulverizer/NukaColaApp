@@ -1,5 +1,6 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  "status": DS.attr(),
+  "on": DS.attr(),
+  "color": DS.attr()
 });

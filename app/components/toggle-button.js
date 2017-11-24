@@ -7,6 +7,6 @@ export default Component.extend({
   on: false,
 
   status: Ember.computed('on', function(){
-    return this.get('on') ? 'Turn On' : 'Turn Off'
+    return this.get('on') ? 'Turn Off' : 'Turn On'
   })
 });

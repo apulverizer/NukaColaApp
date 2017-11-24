@@ -1,8 +1,9 @@
 @import "node_modules/calcite-web/dist/sass/calcite-web";
 
-.path-red path {
-  fill: red
+.svg-color path {
+  fill: currentColor
 }
-.path-blue path{
-  fill: blue
+
+.bottle-off {
+  opacity: .15
 }
