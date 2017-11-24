@@ -1,1 +1,7 @@
 {{yield}}
+<figure class="card-image-wrap">
+    {{inline-svg "assets/images/bottle.svg" class=colorClass}}
+</figure>
+<div class="card-content">
+    {{toggle-button click=(action 'changeState') on=bottle.status}}
+</div>
