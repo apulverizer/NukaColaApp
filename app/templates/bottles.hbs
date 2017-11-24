@@ -1,8 +1,6 @@
 <h3 class="text-center">Nuka Cola Bottles</h3>
 {{#bottle-list filter=(action 'filterBottles') as |bottles|}}
   {{#each bottles as |bottle|}}
-    <div class="column-4">
       {{bottle-card bottle=bottle}}
-    </div>
   {{/each}}
 {{/bottle-list}}
