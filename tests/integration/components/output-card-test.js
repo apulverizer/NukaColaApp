@@ -11,14 +11,13 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{output-card}}`);
 
-  assert.equal(this.$().text().trim(), '');
+  assert.equal(this.$('.button').text().trim(), '');
 
   // Template block usage:
   this.render(hbs`
     {{#output-card}}
-      template block text
     {{/output-card}}
   `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$('.button').text().trim(), '');
 });
