@@ -1,0 +1,12 @@
+{{yield}}
+<div class="card">
+  <figure class="card-image-wrap {{unless output.on 'output-off'}}" style="{{colorStyle}}">
+      {{inline-svg "assets/images/bottle.svg" class="svg-color"}}
+  </figure>
+  <div class="card-content">
+    <span class="text-center">
+      {{toggle-button click=(action 'stateChanged') on=output.on}}
+      {{spectrum-color-picker color=output.color onChange=(action "colorChanged") preferredFormat="hex"}}
+    </span>
+  </div>
+</div>
