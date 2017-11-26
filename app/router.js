@@ -7,7 +7,7 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('bottles');
+  this.route('outputs');
 });
 
 export default Router;

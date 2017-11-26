@@ -2,22 +2,22 @@ import Component from '@ember/component';
 import Ember from 'ember';
 
 export default Component.extend({
-  bottle: null,
+  output: null,
   classNames: ['card block trailer-1'],
   store: Ember.inject.service(),
-  colorStyle: Ember.computed('bottle.color', function(){
-    return Ember.String.htmlSafe('color:' + this.get('bottle.color'));
+  colorStyle: Ember.computed('output.color', function(){
+    return Ember.String.htmlSafe('color:' + this.get('output.color'));
   }),
 
   actions: {
     stateChanged(){
-      this.get('store').findRecord('output', this.get('bottle.id')).then(function(output){
+      this.get('store').findRecord('output', this.get('output.id')).then(function(output){
         output.set('on', !output.get('on'));
         output.save();
       });
     },
     colorChanged(color){
-      this.get('store').findRecord('output', this.get('bottle.id')).then(function(output){
+      this.get('store').findRecord('output', this.get('output.id')).then(function(output){
         output.set('color', color);
         output.save();
       });
