@@ -12,7 +12,14 @@ export default Component.extend({
   actions: {
     stateChanged(){
       this.get('store').findRecord('output', this.get('output.id')).then(function(output){
-        output.set('on', !output.get('on'));
+        if (output.get('on')){
+          // Turn off
+          output.set('color', "#000000");
+        }
+        else {
+          // turn on
+          output.set('color', "#7f7f7f");
+        }
         output.save();
       });
     },

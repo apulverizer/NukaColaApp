@@ -27,10 +27,10 @@ module.exports = function(environment) {
   if (environment === 'development') {
     // fake the outputs
     ENV['ember-cli-mirage'] = {
-      enabled: true
+      enabled: false
     }
     // use mirage so don't need api-host
-    ENV['api-host'] = ''
+    ENV['api-host'] = 'http://192.168.0.106:5000'
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
@@ -56,7 +56,7 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     // set the url that hosts the api
-    ENV['api-host'] = 'http://192.168.0.108:5000'
+    ENV['api-host'] = 'http://192.168.0.106:5000'
     // here you can enable a production-specific feature
   }
 

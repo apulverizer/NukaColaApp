@@ -1,6 +1,9 @@
 import DS from 'ember-data';
+import Ember from 'ember';
 
 export default DS.Model.extend({
-  "on": DS.attr(),
-  "color": DS.attr()
+  "color": DS.attr(),
+  "on": Ember.computed('color', function(){
+    return this.get('color') != '#000000';
+  })
 });
