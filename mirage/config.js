@@ -14,7 +14,7 @@ export default function() {
 
   // update led by id
   this.put('/leds/:id', (schema, request) => {
-    const attrs = JSON.parse(request.requestBody).leds;
+    const attrs = JSON.parse(request.requestBody).led;
     const id = request.params.id;
     let led = schema.leds.find(id).update(attrs);
     return led;
