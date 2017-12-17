@@ -25,12 +25,13 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
-    // fake the outputs
+    // fake the leds
     ENV['ember-cli-mirage'] = {
-      enabled: true
+      enabled: false
     }
     // use mirage so don't need api-host
-    ENV['api-host'] = ''
+    // ENV['api-host'] = ''
+    ENV['api-host'] = 'http://192.168.0.106:5000'
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;

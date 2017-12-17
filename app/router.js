@@ -7,7 +7,7 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('outputs');
+  this.route('leds');
 });
 
 export default Router;

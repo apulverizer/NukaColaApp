@@ -1,4 +1,4 @@
 export default function(server) {
-  // create some outputs
-  server.createList('output', 3);
+  // create some leds
+  server.createList('led', 3);
 }

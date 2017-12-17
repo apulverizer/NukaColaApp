@@ -1,23 +1,23 @@
 export default function() {
   this.namespace = '';
 
-  // get all outputs
-  this.get('/outputs', (schema) => {
-    return schema.outputs.all();
+  // get all leds
+  this.get('/leds', (schema) => {
+    return schema.leds.all();
   });
 
-  // get output by id
-  this.get('/outputs/:id', (schema, request) => {
+  // get led by id
+  this.get('/leds/:id', (schema, request) => {
     const id = request.params.id;
-    return schema.outputs.find(id);
+    return schema.leds.find(id);
   });
 
-  // update output by id
-  this.put('/outputs/:id', (schema, request) => {
-    const attrs = JSON.parse(request.requestBody).output;
+  // update led by id
+  this.put('/leds/:id', (schema, request) => {
+    const attrs = JSON.parse(request.requestBody).leds;
     const id = request.params.id;
-    let output = schema.outputs.find(id).update(attrs);
-    return output;
+    let led = schema.leds.find(id).update(attrs);
+    return led;
   });
 
   // These comments are here to help you get started. Feel free to delete them.

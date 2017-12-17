@@ -1,7 +1,7 @@
 import ApplicationAdapter from './application';
 
 export default ApplicationAdapter.extend({
-    namespace: 'outputs',
+    namespace: 'leds',
     pathForType: function() {
         return '';
     },
