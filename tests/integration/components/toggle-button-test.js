@@ -11,14 +11,13 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{toggle-button}}`);
 
-  assert.equal(this.$().text().trim(), '');
+  assert.equal(this.$().text().trim(), 'Turn On');
 
   // Template block usage:
   this.render(hbs`
     {{#toggle-button}}
-      template block text
     {{/toggle-button}}
   `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$().text().trim(), 'Turn On');
 });
