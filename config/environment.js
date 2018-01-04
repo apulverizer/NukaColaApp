@@ -56,7 +56,7 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     // set the url that hosts the api
-    ENV['api-host'] = 'http://192.168.0.106:5000'
+    ENV['api-host'] = 'http://192.168.0.106:8000'
     // here you can enable a production-specific feature
   }
 
