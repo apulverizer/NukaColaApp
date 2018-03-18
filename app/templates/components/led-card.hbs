@@ -1,12 +1,13 @@
 {{yield}}
-<div class="card">
-  <figure class="card-image-wrap {{unless led.on 'led-off'}}" style="{{colorStyle}}">
-      {{inline-svg "assets/images/bottle.svg" class="svg-color svg-stretch"}}
+{{#paper-item class="md-1-line" as |controls|}}
+  <figure class="{{unless led.on 'led-off'}} md-avatar" style="{{colorStyle}}">
+      {{inline-svg "assets/images/bottle.svg" class="led-color"}}
   </figure>
-  <div class="card-content">
-    <span class="text-center">
-      {{toggle-button click=(action 'stateChanged') on=led.on}}
+  <div class="md-list-item-text {{unless led.on 'led-off'}}" style="{{colorStyle}}">
+        <h3>Bottle {{led.id}}</h3>
+      </div>
+  <div class="md-secondary-container">
       {{spectrum-color-picker color=led.color onChange=(action "colorChanged") preferredFormat="hex"}}
-    </span>
   </div>
-</div>
+{{/paper-item}}
+{{paper-divider}}

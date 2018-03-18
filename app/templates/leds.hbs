@@ -1,4 +1,12 @@
-<h3 class="text-center">Nuka Cola Bottles</h3>
+{{#paper-toolbar accent=true}}
+  {{#paper-toolbar-tools}}
+      <img src="assets/images/nuka-cola-cap-icon.png" class="header-icon">
+    <h2 class="full-width padding-left-16">Nuka Cola Bottle Controller</h2>
+  {{/paper-toolbar-tools}}
+{{/paper-toolbar}}
+
+
+
 {{#led-list filter=(action 'filterLeds') as |leds|}}
   {{#each leds as |led|}}
       {{led-card led=led}}

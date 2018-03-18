@@ -1,14 +1,33 @@
-@import "node_modules/calcite-web/dist/sass/calcite-web";
+$primary: "red";
+$accent: "red";
+$warn: "pink";
 
-.svg-color path {
-  fill: currentColor
+@import 'ember-paper';
+
+.text-align-center {
+  text-align: center;
 }
 
-.svg-stretch {
+.full-width {
   width: 100%;
-  height: 100%
+}
+
+.led-color h3{
+  color: currentColor;
+}
+
+.led-color path {
+  fill: currentColor;
 }
 
 .led-off {
   opacity: .15
+}
+
+.header-icon {
+  width: 50px;
+}
+
+.padding-left-16 {
+  padding-left: 16px;
 }
