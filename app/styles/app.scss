@@ -34,8 +34,25 @@ $nuka-red: #f44336;
   padding-left: 16px;
 }
 
-// color picker classes
+md-list-item .md-secondary-container, md-list-item .md-list-item-inner .md-secondary-container {
+  margin-left: 5px;
+}
+
+.md-list-item-text {
+  margin-right: auto;
+}
+
 .color-picker-container {
+
+  .sp-preview {
+    border: none;
+
+    .sp-preview-inner {
+      border: none;
+      border-radius: 5px;
+    }
+  }
+
   .sp-replacer {
     border: none;
     border-radius: 5px;
@@ -49,6 +66,9 @@ $nuka-red: #f44336;
   .sp-cf {
     span {
       border: none;
+      width: 25px;
+      height: 25px;
+      border-radius: 5px;
     }
   }
 

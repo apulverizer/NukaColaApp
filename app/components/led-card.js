@@ -5,6 +5,9 @@ export default Component.extend({
   led: null,
   classNames: ['card block trailer-1'],
   store: Ember.inject.service(),
+  state: Ember.computed('led.color', function(){
+    return this.get('led.color') == "#000000" ? "On": "Off";
+  }),
   colorStyle: Ember.computed('led.color', function(){
     return Ember.String.htmlSafe('color:' + this.get('led.color'));
   }),
@@ -22,6 +25,19 @@ export default Component.extend({
         }
         led.save();
       });
+    },
+    toggleOn(){
+      this.get('store').findRecord('led', this.get('led.id')).then(function(led){
+        if(led.get('on')){
+          led.set('color', '#000000');
+          led.save();
+        }
+        else {
+          led.set('color', '#7f7f7f');
+          led.save();
+        }
+      });
+      
     },
     colorChanged(color){
       this.get('store').findRecord('led', this.get('led.id')).then(function(led){
