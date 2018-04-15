@@ -6,8 +6,8 @@
   <div class="md-list-item-text {{unless led.on 'led-off'}}" style="{{colorStyle}}">
         <h3>Bottle {{led.id}}</h3>
       </div>
-  <div class="md-secondary-container">
-      {{spectrum-color-picker color=led.color onChange=(action "colorChanged") preferredFormat="hex"}}
+  <div class="md-secondary-container color-picker-container">
+      {{spectrum-color-picker moveFiresChange=true palette=paletteString clickoutFiresChange=true showPaletteOnly=true color=led.color onChange=(action "colorChanged") preferredFormat="hex"}}
   </div>
 {{/paper-item}}
 {{paper-divider}}

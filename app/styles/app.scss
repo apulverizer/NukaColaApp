@@ -2,6 +2,8 @@ $primary: "red";
 $accent: "red";
 $warn: "pink";
 
+$nuka-red: #f44336;
+
 @import 'ember-paper';
 
 .text-align-center {
@@ -30,4 +32,27 @@ $warn: "pink";
 
 .padding-left-16 {
   padding-left: 16px;
+}
+
+// color picker classes
+.color-picker-container {
+  .sp-replacer {
+    border: none;
+    border-radius: 5px;
+  }
+}
+
+.sp-container {
+  border: none;
+  border-radius: 5px;
+
+  .sp-cf {
+    span {
+      border: none;
+    }
+  }
+
+  button {
+    border-radius: 5px;
+  }
 }
